@@ -14,7 +14,6 @@ npm install
 # serve with hot reload at localhost:3000
 npm run dev
 # start server
-node server/app.js
 npm run py
 
 # build for production with minification

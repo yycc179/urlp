@@ -14,7 +14,7 @@
       </template>
     </b-table>
 
-    <div v-show="items.length">
+    <div v-show="raw">
         <b-button variant="success" @click='show_d'>Details</b-button>
     </div>
     <div>
