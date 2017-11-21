@@ -38,7 +38,7 @@ router.get('/', function (req, res, next) {
 
 function handler(res, next) {
   return (function (e, stdout, stderr) {
-    if (e) throw e
+    if (e) return res.send(e.toString())
 
     if(stdout) {
       res.send(stdout.toString())
