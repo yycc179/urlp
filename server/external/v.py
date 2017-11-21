@@ -42,4 +42,4 @@ def get_play_url(id):
 
 if __name__ == '__main__':
     # print get_play_url(u'http://www.ted.com/talks/r_luke_dubois_insightful_human_portraits_made_from_data')
-    youtube_dl.main([sys.argv[1], '-j', '--no-check-certificate', '--youtube-skip-dash-manifest'])
+    youtube_dl.main([sys.argv[1], '-j', '--no-check-certificate', '--youtube-skip-dash-manifest', '--restrict-filenames'])
