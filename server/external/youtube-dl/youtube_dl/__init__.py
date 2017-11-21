@@ -457,7 +457,7 @@ def _real_main(argv=None):
             ydl.to_screen('--max-download limit reached, aborting.')
             retcode = 101
 
-    # sys.exit(retcode)
+    sys.exit(retcode)
 
 
 def main(argv=None):
