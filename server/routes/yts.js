@@ -38,10 +38,11 @@ router.get('/', function (req, res, next) {
 
 function handler(res, next) {
   return (function (e, stdout, stderr) {
-    if (e) return res.send(e.toString())
-
-    if(stdout) {
+    if (stdout) {
       res.send(stdout.toString())
+    }
+    else if (e) {
+      return res.send(e.toString())
     }
     else if (stderr) {
       res.send(stderr.toString())
