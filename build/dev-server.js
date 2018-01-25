@@ -30,7 +30,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', require('../server/routes/index'));
 app.use('/auth', require('../server/routes/auth'));
-app.use('/yts', require('../server/routes/yts'));
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,

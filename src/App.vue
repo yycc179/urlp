@@ -1,18 +1,13 @@
 <template>
   <div id="app">
     <b-navbar toggleable="md" type="dark" variant="info">
-      
         <b-nav-toggle target="nav_collapse"></b-nav-toggle>
-      
         <b-navbar-brand to="/">OTT server</b-navbar-brand>
-      
         <b-collapse is-nav id="nav_collapse">
-      
           <b-navbar-nav>
-            <b-nav-item to="#">Video</b-nav-item>
+            <b-nav-item to="/">Video</b-nav-item>
             <b-nav-item to="about">About</b-nav-item>
           </b-navbar-nav>
-      
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
             <b-nav-item to="login" v-if='!user'>Login</b-nav-item>
@@ -31,7 +26,6 @@
       <router-view/>
     <b-nav-text>&copy; 2017 - yycc179@gmail.com</b-nav-text>
   </div>
-  
 </template>
 
 <script>
@@ -76,6 +70,6 @@ form {
 }
 
 .container {
-  padding: 10px;  
+  padding: 10px
 }
 </style>

@@ -3,7 +3,7 @@
     <h2>Server info</h2>
     <table class="table">
       <tbody>
-        <tr v-for='i in items'>
+        <tr v-for='(i, key) in items' :key=key>
           <td>
             {{i.name}}
           </td>
@@ -18,7 +18,6 @@
     <ul class="list-group">
       <li class="list-group-item">Activation</li>
       <li class="list-group-item">Video url parse</li>
-      <li class="list-group-item">YT Signature API</li>
     </ul>
   </b-container>
 </template>

@@ -18,7 +18,7 @@
         <b-button variant="success" @click='show_d'>Details</b-button>
     </div>
     <div>
-        <textarea class="form-control" rows="30" id='info' v-show='show'>{{raw}}</textarea>
+        <textarea class="form-control" rows="30" id='info' v-show='show' v-model="raw"></textarea>
     </div>
   </b-container>
 </template>
@@ -48,8 +48,8 @@
           return
         }
         this.msg = 'Waiting for server to return result...'
-        getJSON('/yts/v?u=' + this.url, r => {
-          this.raw = r
+        getJSON('/v?u=' + this.url, r => {
+          this.raw = JSON.stringify(r)
           if (!r || !r.formats) {
             this.msg = 'Get result failed!'
             return
@@ -87,5 +87,3 @@
     }
   }
 </script>
-
-

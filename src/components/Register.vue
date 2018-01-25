@@ -16,7 +16,6 @@
           </b-form-feedback>
       </b-form-group>
       <p class="text-danger">{{msg}}</p>
-      
       <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="secondary">Reset</b-button>
     </b-form>

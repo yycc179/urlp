@@ -3,6 +3,22 @@ const router = require('express').Router(),
   exec = require('child_process').execSync,
   env = process.env;
 
+const { execFile } = require('child_process');
+
+router.get('/v', function (req, res, next) {
+  execFile('python', ['server/external/v.py', req.query.u], (e, stdout, stderr) => {
+      if (stdout) {
+        res.send(stdout.toString())
+      }
+      else if (e) {
+        return res.send(e.toString())
+      }
+      else if (stderr) {
+        res.send(stderr.toString())
+      }
+  })
+})
+
 router.get('/sys', function (req, res, next) {
   res.json([{
     name: 'Node.js Version',
